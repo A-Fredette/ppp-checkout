@@ -40,7 +40,7 @@ app.post('/session', async (req, res) => {
     cancel_url: `${DOMAIN}/cancel.html`,
     metadata: {'sales-rep': salesRep}
   }, {
-    stripeAccount: data.account,s
+    stripeAccount: data.account,
   }).catch(error => console.log('Error:', error))
 
   return res.redirect(303, session.url);
