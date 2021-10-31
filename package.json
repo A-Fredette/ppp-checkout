@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "NODE_ENV=dev nodemon server.js",
-    "start": "NODE_ENV=production server.js"
+    "start": "NODE_ENV=production node server.js"
   },
   "author": "stripe-samples",
   "license": "ISC",

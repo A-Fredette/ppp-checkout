@@ -7,7 +7,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-const DOMAIN = process.env.NODE_ENV === 'dev' ? 'http://localhost:4242' : 'https://ppp-checkout.herokuapp.com'
+const DOMAIN = process.env.NODE_ENV === 'dev' ? 'http://localhost:4242' : 'https://ppp-checkout.herokuapp.com/'
 const healthpreneuerFee = .97; //Stripe charges 2.9% + .30 cents per successful transaction
 const calcFee = (price) => (price * healthpreneuerFee)
 
@@ -45,4 +45,4 @@ app.post('/session', async (req, res) => {
   return res.redirect(303, session.url);
 })
 
-app.listen(4242, () => console.log(`Running at ${DOMAIN}`));
+app.listen(process.env.PORT || 4242, () => console.log(`Running at ${DOMAIN}`))
