@@ -8,24 +8,26 @@
 </head>
 <body>
 <section>
-<!--    Create a dropdown list of all the sales reps. this list will control the clients that they can select-->
-<!--    <p>1. Select your name:</p>-->
     <form class="sales-client-form" action="/session/" method="POST">
-        <label for="sales">Choose your name from the dropdown menu:</label>
-        <select id="sales" name="sales">
-            <option value="Brian Hoa">Brian Hoa</option>
-            <option value="Wais Sallek">Wais Sallek</option>
-            <option value="Branson Khemraj">Branson Khemraj</option>
-        </select>
-        <div style="margin-bottom:1em;"></div>
-        <label for="client">Which client are you selling for?</label>
-        <select id="client" name="client">
-            <option value="d9182703-af59-4cce-bb5d-7e1d0f85fa46">Nancy Ma International</option>
-            <option value="0ffec302-c438-4bc5-9cff-2608e492b4e3">Migraine Mastery</option>
-<!--            TESTING USE ONLY-->
-<!--            <option value="d9182703-af59-4cce-bb5d-7e1d0f85f226">Better Together</option>-->
-        </select>
-        <button type="submit" id="checkout-button">Proceed to Checkout</button>
+        <div class="questions-container">
+            <label for="sales"><b>Step 1: </b>Choose your name from the dropdown menu:</label>
+            <select id="sales" name="sales">
+                <option disabled selected value> -- Choose Your Name -- </option>
+                <option value="Brian Hoa">Brian Hoa</option>
+                <option value="Wais Sallek">Wais Sallek</option>
+                <option value="Branson Khemraj">Branson Khemraj</option>
+            </select>
+            <div style="margin-bottom:1.5em;"></div>
+            <label for="client"><b>Step 2: </b>Choose the client you're selling for:</label>
+            <select id="client" name="client">
+                <option disabled selected value> -- Choose Your Client -- </option>
+                <option value="d9182703-af59-4cce-bb5d-7e1d0f85fa46">Nancy Ma International</option>
+                <option value="0ffec302-c438-4bc5-9cff-2608e492b4e3">Migraine Mastery</option>
+    <!--            TESTING USE ONLY-->
+    <!--            <option value="d9182703-af59-4cce-bb5d-7e1d0f85f226">Better Together</option>-->
+            </select>
+        </div>
+        <button type="submit" id="checkout-button">CHECKOUT</button>
     </form>
 </section>
 </body>
