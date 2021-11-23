@@ -1,4 +1,3 @@
-//Stripe Keys
 const keys = (process.env.NODE_ENV === 'dev') ?
     //Test Keys
      {
@@ -31,7 +30,12 @@ const keys = (process.env.NODE_ENV === 'dev') ?
                 name: "PPP Test",
                 product: process.env.MA_PPP_TEST_PRODUCT,
                 account:  process.env.MA_ACCOUNT
-            }
+            },
+        "D596DA0B-F451-46C9-8107-71CD1E6AAC62": {
+            name: "Nature's Health Clinic",
+            product: process.env.NATURES_HEALTH_PRODUCT,
+            account: process.env.NATURES_HEALTH_ACCOUNT
+        }
     }
 
 module.exports = keys
